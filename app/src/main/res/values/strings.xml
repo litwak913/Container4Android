@@ -1,0 +1,12 @@
+<resources>
+    <string name="label">LinuxStarter</string>
+    <string name="home">Home</string>
+    <string name="welcome">Welcome to LinuxStarter</string>
+    <string name="unknown_container">Unknown Container</string>
+    <string name="status">Status:</string>
+    <string name="unknown">Unknown</string>
+    <string name="running">Running</string>
+    <string name="stop">Stop</string>
+    <string name="stopping">Stopping</string>
+    <string name="starting">Starting</string>
+</resources>
