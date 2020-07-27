@@ -41,6 +41,7 @@ class ContainerAdapter(container:List<Container>):RecyclerView.Adapter<Container
         val container: Container = mContainerList.get(position)
         holder.containerInfo.text = container.name
         if (container.status == 0){
+            holder.containerStatus.setTextColor(Color.BLACK)
             holder.containerStatus.text = mContext?.resources?.getString(R.string.unknown)
         } else if(container.status==1) {
             holder.containerStatus.setTextColor(Color.RED)
