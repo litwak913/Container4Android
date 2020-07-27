@@ -16,7 +16,7 @@ class WelcomeActivity : AppIntro(){
         perf=getSharedPreferences("config", MODE_PRIVATE)
         editor=perf.edit()
         if(perf.getBoolean("firstRunComplete",false)){
-            startActivity(Intent(MainActivity@this, MainActivity::class.java ))
+            startActivity(Intent(this, MainActivity::class.java ))
             finish()
         }
         addSlide(AppIntroFragment.newInstance(
@@ -34,7 +34,7 @@ class WelcomeActivity : AppIntro(){
         super.onSkipPressed(currentFragment)
         editor.putBoolean("firstRunComplete",true)
         editor.commit()
-        startActivity(Intent(MainActivity@this, MainActivity::class.java ))
+        startActivity(Intent(this, MainActivity::class.java ))
         finish()
     }
 
@@ -42,7 +42,7 @@ class WelcomeActivity : AppIntro(){
         super.onDonePressed(currentFragment)
         editor.putBoolean("firstRunComplete",true)
         editor.commit()
-        startActivity(Intent(MainActivity@this, MainActivity::class.java ))
+        startActivity(Intent(this, MainActivity::class.java ))
         finish()
     }
 }

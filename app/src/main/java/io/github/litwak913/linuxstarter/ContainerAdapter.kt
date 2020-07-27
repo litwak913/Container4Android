@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.linux_container_item.view.*
 class ContainerAdapter(container:List<Container>):RecyclerView.Adapter<ContainerAdapter.ViewHolder>(){
 
     var mContext: Context? =null
-    lateinit var mContainerList:List<Container>
+    var mContainerList:List<Container>
     class ViewHolder(view: View):RecyclerView.ViewHolder(view){
         var containerInfo:TextView
         var containerStatus:TextView
@@ -38,7 +38,7 @@ class ContainerAdapter(container:List<Container>):RecyclerView.Adapter<Container
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        var container: Container = mContainerList.get(position)
+        val container: Container = mContainerList.get(position)
         holder.containerInfo.text = container.name
         if (container.status == 0){
             holder.containerStatus.text = mContext?.resources?.getString(R.string.unknown)
