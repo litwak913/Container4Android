@@ -8,7 +8,11 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <include layout="@layout/main_layout" />
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/main_fragment"
+        android:name="io.github.litwak913.linuxstarter.MainFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="310dp"

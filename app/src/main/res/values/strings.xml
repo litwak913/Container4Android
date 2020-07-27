@@ -9,4 +9,6 @@
     <string name="stop">Stop</string>
     <string name="stopping">Stopping</string>
     <string name="starting">Starting</string>
+    <string name="settings">Settings</string>
+    <string name="manager_modules">Modules</string>
 </resources>
