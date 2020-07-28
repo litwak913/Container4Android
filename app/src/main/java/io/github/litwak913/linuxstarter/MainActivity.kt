@@ -17,10 +17,18 @@ class MainActivity : AppCompatActivity() {
             return@setNavigationItemSelectedListener true
         }
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId==android.R.id.home){
+        if (item.itemId == android.R.id.home) {
             drawer_layout.openDrawer(GravityCompat.START)
         }
         return true
+    }
+
+    override fun onBackPressed() {
+        if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
+            drawer_layout.closeDrawers()
+        } else
+            super.onBackPressed()
     }
 }
