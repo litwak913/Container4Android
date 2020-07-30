@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
-    var currentFragment:Fragment=MainFragment()
+    private var currentFragment: Fragment = MainFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -44,10 +44,11 @@ class MainActivity : AppCompatActivity() {
         } else
             super.onBackPressed()
     }
-    fun switchFragment(targetFragment: Fragment) {
+
+    private fun switchFragment(targetFragment: Fragment) {
         val transaction: FragmentTransaction = supportFragmentManager
             .beginTransaction()
-        if (!targetFragment.isAdded()) {
+        if (!targetFragment.isAdded) {
             transaction
                 .hide(currentFragment)
                 .add(R.id.main_fragment, targetFragment)

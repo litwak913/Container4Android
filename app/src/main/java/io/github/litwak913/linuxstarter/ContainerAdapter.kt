@@ -34,21 +34,27 @@ class ContainerAdapter(container:List<Container>):RecyclerView.Adapter<Container
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val container: Container = mContainerList.get(position)
         holder.containerInfo.text = container.name
-        if (container.status == 0){
-            holder.containerStatus.setTextColor(Color.BLACK)
-            holder.containerStatus.text = mContext?.resources?.getString(R.string.unknown)
-        } else if(container.status==1) {
-            holder.containerStatus.setTextColor(Color.RED)
-            holder.containerStatus.text = mContext?.resources?.getString(R.string.stop)
-        } else if(container.status==2) {
-            holder.containerStatus.setTextColor(Color.parseColor("#ffffcc00"))
-            holder.containerStatus.text = mContext?.resources?.getString(R.string.starting)
-        } else if(container.status==3) {
-            holder.containerStatus.setTextColor(Color.parseColor("#ffffcc00"))
-            holder.containerStatus.text = mContext?.resources?.getString(R.string.stopping)
-        }else if(container.status==4) {
-            holder.containerStatus.setTextColor(Color.GREEN)
-            holder.containerStatus.text = mContext?.resources?.getString(R.string.running)
+        when (container.status) {
+            0 -> {
+                holder.containerStatus.setTextColor(Color.BLACK)
+                holder.containerStatus.text = mContext?.resources?.getString(R.string.unknown)
+            }
+            1 -> {
+                holder.containerStatus.setTextColor(Color.RED)
+                holder.containerStatus.text = mContext?.resources?.getString(R.string.stop)
+            }
+            2 -> {
+                holder.containerStatus.setTextColor(Color.parseColor("#ffffcc00"))
+                holder.containerStatus.text = mContext?.resources?.getString(R.string.starting)
+            }
+            3 -> {
+                holder.containerStatus.setTextColor(Color.parseColor("#ffffcc00"))
+                holder.containerStatus.text = mContext?.resources?.getString(R.string.stopping)
+            }
+            4 -> {
+                holder.containerStatus.setTextColor(Color.GREEN)
+                holder.containerStatus.text = mContext?.resources?.getString(R.string.running)
+            }
         }
     }
 }

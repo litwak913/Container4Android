@@ -1,6 +1,5 @@
 package io.github.litwak913.linuxstarter
 
-import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -9,20 +8,20 @@ import com.github.appintro.AppIntro
 import com.github.appintro.AppIntroFragment
 
 class WelcomeActivity : AppIntro(){
-    lateinit var perf:SharedPreferences
-    lateinit var editor:SharedPreferences.Editor
+    private var perf: SharedPreferences = getSharedPreferences("config", MODE_PRIVATE)
+    private var editor: SharedPreferences.Editor = perf.edit()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        perf=getSharedPreferences("config", MODE_PRIVATE)
-        editor=perf.edit()
-        if(perf.getBoolean("firstRunComplete",false)){
-            startActivity(Intent(this, MainActivity::class.java ))
+        if (perf.getBoolean("firstRunComplete", false)) {
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
-        addSlide(AppIntroFragment.newInstance(
-            title = "Welcome...",
-            description = "This is the first slide of the example"
-        ))
+        addSlide(
+            AppIntroFragment.newInstance(
+                title = "Welcome...",
+                description = "This is the first slide of the example"
+            )
+        )
         addSlide(
             AppIntroFragment.newInstance(
             title = "...Let's get started!",
