@@ -11,21 +11,15 @@ import kotlinx.android.synthetic.main.linux_container_item.view.*
 
 class ContainerAdapter(container:List<Container>):RecyclerView.Adapter<ContainerAdapter.ViewHolder>(){
 
-    var mContext: Context? =null
-    var mContainerList:List<Container>
+    private var mContext: Context? =null
+    private var mContainerList:List<Container> = container
+
     class ViewHolder(view: View):RecyclerView.ViewHolder(view){
-        var containerInfo:TextView
-        var containerStatus:TextView
+        var containerInfo:TextView = view.container_name
+        var containerStatus:TextView = view.container_status
 
-        init {
-            containerInfo=view.container_name
-            containerStatus=view.container_status
+    }
 
-        }
-    }
-    init {
-        mContainerList=container
-    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         if (mContext==null){
             mContext=parent.context

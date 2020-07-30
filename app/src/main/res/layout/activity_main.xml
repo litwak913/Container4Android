@@ -7,13 +7,24 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <androidx.fragment.app.FragmentContainerView
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_scrollFlags="noScroll"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        <androidx.fragment.app.FragmentContainerView
         android:id="@+id/main_fragment"
-        android:name="io.github.litwak913.linuxstarter.MainFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
+    </LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:layout_width="310dp"
         android:layout_height="match_parent"

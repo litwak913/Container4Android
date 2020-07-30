@@ -21,7 +21,7 @@ class MainFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        (activity as AppCompatActivity).setSupportActionBar(tool_bar)
+
         refresh.setColorSchemeResources(R.color.colorPrimary)
         container_list.layoutManager = LinearLayoutManager(activity)
         container_list.adapter = ContainerAdapter(genList())
@@ -37,7 +37,7 @@ class MainFragment : Fragment() {
 
     }
 
-    fun genList(): List<Container> {
+    private fun genList(): List<Container> {
         val container: MutableList<Container> = ArrayList<Container>()
         for (i in 0..5) {
             container.add(Container("AAA", 0))
