@@ -1,6 +1,7 @@
 package io.github.litwak913.linuxstarter
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,7 +22,8 @@ class MainFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
+        container_list.visibility = View.VISIBLE
+        no_text.visibility = View.GONE
         refresh.setColorSchemeResources(R.color.colorPrimary)
         container_list.layoutManager = LinearLayoutManager(activity)
         container_list.adapter = ContainerAdapter(genList())
@@ -33,20 +35,24 @@ class MainFragment : Fragment() {
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu)
             actionBar.setDisplayHomeAsUpEnabled(true)
         }
-
+        Log.d("MainFragment", (container_list.adapter as ContainerAdapter).itemCount.toString())
+        if ((container_list.adapter as ContainerAdapter).itemCount == 0) {
+            container_list.visibility = View.GONE
+            no_text.visibility = View.VISIBLE
+        }
 
     }
 
     private fun genList(): List<Container> {
         val container: MutableList<Container> = ArrayList<Container>()
-        for (i in 0..5) {
+        /*for (i in 0..5) {
             container.add(Container("AAA", 0))
             container.add(Container("BBB", 1))
             container.add(Container("CCC", 2))
             container.add(Container("DDD", 3))
             container.add(Container("EEE", 4))
 
-        }
+        }*/
         return container
     }
 

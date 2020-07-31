@@ -1,14 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="label">LinuxStarter</string>
-    <string name="home">Home</string>
-    <string name="welcome">Welcome to LinuxStarter</string>
-    <string name="unknown_container">Unknown Container</string>
-    <string name="status">Status:</string>
-    <string name="unknown">Unknown</string>
-    <string name="running">Running</string>
-    <string name="stop">Stop</string>
-    <string name="stopping">Stopping</string>
-    <string name="starting">Starting</string>
-    <string name="settings">Settings</string>
-    <string name="manager_modules">Modules</string>
+    <string name="label">Container4Android</string>
+    <string name="home">主页</string>
+    <string name="unknown_container">未知容器</string>
+    <string name="status">状态：</string>
+    <string name="unknown">未知</string>
+    <string name="running">运行中</string>
+    <string name="stopping">停止中</string>
+    <string name="starting">启动中</string>
+    <string name="stop">停止</string>
+    <string name="settings">设置</string>
+    <string name="manager_modules">模块</string>
+    <string name="no_container">没有容器\n快去添加你的第一个容器吧！</string>
+    <string name="welcome">欢迎使用 Container4Android </string>
+    <string name="welcome_desc">下一代 Android 上的 Linux 容器解决方案</string>
+    <string name="welcome_module">模块化</string>
+    <string name="welcome_deploy">部署</string>
+    <string name="welcome_custom">自定义</string>
+    <string name="app_ready">一切准备就绪</string>
+    <string name="check_root">检查 ROOT 权限</string>
+    <string name="request_permissions">检查权限</string>
+    <string name="check_root_desc">为了让 Container4Android 正常使用，请给予 Container4Android ROOT 权限</string>
+    <string name="welcome_deploy_desc">只需几个按钮，即可在 Android 上部署 Linux 环境</string>
+    <string name="welcome_custom_desc">可以为容器设置 SSH、挂载、图形界面、音频输出等</string>
+    <string name="welcome_module_desc">通过模块来为容器配置自定义功能，如自动安装 LAMP 环境等</string>
+    <string name="app_ready_desc">开始使用 Container4Android 吧！</string>
+    <string name="check_root_ok">ROOT 权限获取成功</string>
 </resources>

@@ -9,14 +9,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
-        <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/container_list"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/container_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/no_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/no_container"
+            android:visibility="gone" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/add_button"
