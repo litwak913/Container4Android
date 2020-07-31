@@ -1,5 +1,6 @@
 package io.github.litwak913.linuxstarter
 
+import android.Manifest
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -8,39 +9,69 @@ import com.github.appintro.AppIntro
 import com.github.appintro.AppIntroFragment
 
 class WelcomeActivity : AppIntro(){
-    private var perf: SharedPreferences = getSharedPreferences("config", MODE_PRIVATE)
-    private var editor: SharedPreferences.Editor = perf.edit()
+    private lateinit var perf: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        perf = getSharedPreferences("config", MODE_PRIVATE)
+
         if (perf.getBoolean("firstRunComplete", false)) {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
         addSlide(
             AppIntroFragment.newInstance(
-                title = "Welcome...",
-                description = "This is the first slide of the example"
+                title = resources.getString(R.string.welcome),
+                description = resources.getString(R.string.welcome_desc)
             )
         )
         addSlide(
             AppIntroFragment.newInstance(
-            title = "...Let's get started!",
-            description = "This is the last slide, I won't annoy you more :)"
-        ))
+                title = resources.getString(R.string.welcome_deploy),
+                description = resources.getString(R.string.welcome_deploy_desc)
+            )
+        )
+        addSlide(
+            AppIntroFragment.newInstance(
+                title = resources.getString(R.string.welcome_custom),
+                description = resources.getString(R.string.welcome_custom_desc)
+            )
+        )
+        addSlide(
+            AppIntroFragment.newInstance(
+                title = resources.getString(R.string.welcome_module),
+                description = resources.getString(R.string.welcome_module_desc)
+            )
+        )
+        addSlide(RootFragment())
+        addSlide(
+            AppIntroFragment.newInstance(
+                title = resources.getString(R.string.app_ready),
+                description = resources.getString(R.string.app_ready_desc)
+            )
+        )
+        askForPermissions(
+            permissions = arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
+            slideNumber = 4,
+            required = true
+        )
+        setDoneText("完成")
+        setSkipText("跳过")
     }
 
     override fun onSkipPressed(currentFragment: Fragment?) {
         super.onSkipPressed(currentFragment)
-        editor.putBoolean("firstRunComplete",true)
-        editor.commit()
+        val editor = perf.edit()
+        editor.putBoolean("firstRunComplete", true)
+        editor.apply()
         startActivity(Intent(this, MainActivity::class.java ))
         finish()
     }
 
     override fun onDonePressed(currentFragment: Fragment?) {
         super.onDonePressed(currentFragment)
-        editor.putBoolean("firstRunComplete",true)
-        editor.commit()
+        val editor = perf.edit()
+        editor.putBoolean("firstRunComplete", true)
+        editor.apply()
         startActivity(Intent(this, MainActivity::class.java ))
         finish()
     }
