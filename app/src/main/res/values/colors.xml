@@ -3,4 +3,10 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="page1_color">#FF9800</color>
+    <color name="page2_color">#03A9F4</color>
+    <color name="page3_color">#4CAF50</color>
+    <color name="page4_color">#EC407A</color>
+    <color name="page5_color">#00BCD4</color>
+    <color name="page6_color">#F44336</color>
 </resources>

@@ -1,4 +1,4 @@
-package io.github.litwak913.linuxstarter
+package io.github.litwak913.linuxstarter.fragment
 
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +9,9 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import io.github.litwak913.linuxstarter.R
+import io.github.litwak913.linuxstarter.utils.Container
+import io.github.litwak913.linuxstarter.utils.ContainerAdapter
 import kotlinx.android.synthetic.main.main_fragment.*
 
 class MainFragment : Fragment() {
@@ -26,7 +29,8 @@ class MainFragment : Fragment() {
         no_text.visibility = View.GONE
         refresh.setColorSchemeResources(R.color.colorPrimary)
         container_list.layoutManager = LinearLayoutManager(activity)
-        container_list.adapter = ContainerAdapter(genList())
+        container_list.adapter =
+            ContainerAdapter(genList())
         val actionBar: ActionBar? = (activity as AppCompatActivity).supportActionBar
         refresh.setOnRefreshListener {
             refresh.isRefreshing = false

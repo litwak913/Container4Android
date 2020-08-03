@@ -1,4 +1,4 @@
-package io.github.litwak913.linuxstarter
+package io.github.litwak913.linuxstarter.utils
 
 import android.content.Context
 import android.graphics.Color
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import io.github.litwak913.linuxstarter.R
 import kotlinx.android.synthetic.main.linux_container_item.view.*
 
 class ContainerAdapter(container:List<Container>):RecyclerView.Adapter<ContainerAdapter.ViewHolder>(){
@@ -21,10 +22,16 @@ class ContainerAdapter(container:List<Container>):RecyclerView.Adapter<Container
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        if (mContext==null){
-            mContext=parent.context
+        if (mContext == null) {
+            mContext = parent.context
         }
-        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.linux_container_item,parent,false))
+        return ViewHolder(
+            LayoutInflater.from(parent.context).inflate(
+                R.layout.linux_container_item,
+                parent,
+                false
+            )
+        )
     }
 
     override fun getItemCount(): Int {

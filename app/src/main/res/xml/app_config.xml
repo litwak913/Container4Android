@@ -1,13 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <SwitchPreferenceCompat
-        app:key="notifications"
-        app:title="Enable message notifications" />
-
-    <Preference
-        app:key="feedback"
-        app:summary="Report technical issues or suggest new features"
-        app:title="Send feedback" />
-
+    <PreferenceCategory app:title="@string/basic">
+        <SwitchPreference
+            app:defaultValue="false"
+            app:key="always_cpu"
+            app:summary="@string/always_cpu_desc"
+            app:title="@string/always_cpu" />
+        <SwitchPreference
+            app:defaultValue="false"
+            app:key="always_wifi"
+            app:summary="@string/always_wifi_desc"
+            app:title="@string/always_wifi" />
+        <SwitchPreference
+            app:defaultValue="false"
+            app:key="always_display"
+            app:summary="@string/always_display_desc"
+            app:title="@string/always_display" />
+        <EditTextPreference
+            app:defaultValue="/system/xbin/busybox"
+            app:key="busybox_path"
+            app:singleLine="true"
+            app:summary="@string/busybox_path_desc"
+            app:title="@string/busybox_path" />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/about">
+        <Preference
+            app:key="version"
+            app:summary="@string/app_version"
+            app:title="@string/version" />
+        <Preference
+            app:key="feedback"
+            app:summary="@string/send_feedback_desc"
+            app:title="@string/send_feedback" />
+    </PreferenceCategory>
 </PreferenceScreen>

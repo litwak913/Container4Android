@@ -26,4 +26,21 @@
     <string name="welcome_module_desc">通过模块来为容器配置自定义功能，如自动安装 LAMP 环境等</string>
     <string name="app_ready_desc">开始使用 Container4Android 吧！</string>
     <string name="check_root_ok">ROOT 权限获取成功</string>
+    <string name="check_root_fail">ROOT 检查失败</string>
+    <string name="check_root_fail_desc">请确认你是否为 Container4Android 授权 ROOT 权限，或确认手机是否 ROOT</string>
+    <string name="ok">确认</string>
+    <string name="busybox_path_desc">设置 BusyBox 路径</string>
+    <string name="busybox_path">BusyBox 路径</string>
+    <string name="always_cpu_desc">在屏幕关闭时，保持 CPU 运行</string>
+    <string name="always_cpu">CPU 唤醒</string>
+    <string name="always_wifi_desc">运行时保持 WIFI 开启</string>
+    <string name="always_wifi">保持 WIFI</string>
+    <string name="always_display_desc">在运行时保持屏幕常亮</string>
+    <string name="always_display">保持常亮</string>
+    <string name="basic">基本设置</string>
+    <string name="about">关于</string>
+    <string name="app_version">v1.0</string>
+    <string name="version">版本</string>
+    <string name="send_feedback">发送反馈</string>
+    <string name="send_feedback_desc">在 GitHub 上发送 Issus</string>
 </resources>
