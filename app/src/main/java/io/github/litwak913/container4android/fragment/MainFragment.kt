@@ -1,4 +1,4 @@
-package io.github.litwak913.linuxstarter.fragment
+package io.github.litwak913.container4android.fragment
 
 import android.os.Bundle
 import android.util.Log
@@ -9,9 +9,9 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import io.github.litwak913.linuxstarter.R
-import io.github.litwak913.linuxstarter.utils.Container
-import io.github.litwak913.linuxstarter.utils.ContainerAdapter
+import io.github.litwak913.container4android.R
+import io.github.litwak913.container4android.utils.Container
+import io.github.litwak913.container4android.utils.ContainerAdapter
 import kotlinx.android.synthetic.main.main_fragment.*
 
 class MainFragment : Fragment() {

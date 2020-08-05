@@ -1,4 +1,4 @@
-package io.github.litwak913.linuxstarter.utils
+package io.github.litwak913.container4android.utils
 
 import android.content.Context
 import android.graphics.Color
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import io.github.litwak913.linuxstarter.R
+import io.github.litwak913.container4android.R
 import kotlinx.android.synthetic.main.linux_container_item.view.*
 
 class ContainerAdapter(container:List<Container>):RecyclerView.Adapter<ContainerAdapter.ViewHolder>(){

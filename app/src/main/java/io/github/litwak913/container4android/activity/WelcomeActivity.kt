@@ -1,4 +1,4 @@
-package io.github.litwak913.linuxstarter.activity
+package io.github.litwak913.container4android.activity
 
 import android.Manifest
 import android.content.Intent
@@ -8,8 +8,8 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.github.appintro.AppIntro
 import com.github.appintro.AppIntroFragment
-import io.github.litwak913.linuxstarter.R
-import io.github.litwak913.linuxstarter.fragment.RootFragment
+import io.github.litwak913.container4android.R
+import io.github.litwak913.container4android.fragment.RootFragment
 
 class WelcomeActivity : AppIntro(){
     private lateinit var perf: SharedPreferences

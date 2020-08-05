@@ -1,4 +1,4 @@
-package io.github.litwak913.linuxstarter.activity
+package io.github.litwak913.container4android.activity
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -6,9 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import io.github.litwak913.linuxstarter.R
-import io.github.litwak913.linuxstarter.fragment.AppSettingsFragment
-import io.github.litwak913.linuxstarter.fragment.MainFragment
+import io.github.litwak913.container4android.R
+import io.github.litwak913.container4android.fragment.AppSettingsFragment
+import io.github.litwak913.container4android.fragment.MainFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 

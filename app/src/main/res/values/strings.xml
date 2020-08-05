@@ -42,5 +42,12 @@
     <string name="app_version">v1.0</string>
     <string name="version">版本</string>
     <string name="send_feedback">发送反馈</string>
-    <string name="send_feedback_desc">在 GitHub 上发送 Issus</string>
+    <string name="send_feedback_desc">在 GitHub 上发送 Issue</string>
+    <string name="secret_mode_desc">在桌面隐藏 Container4Android 图标</string>
+    <string name="secret_mode">隐藏图标</string>
+    <string name="no_network">网络未连接</string>
+    <string name="no_network_desc">网络暂时不可用，请检查您的移动数据或无线网络</string>
+    <string name="try_again">重试</string>
+    <string name="hint">提示</string>
+    <string name="secret_mode_hint">你可以在拨号键盘输入 *#*#266824637#*#* 来打开应用</string>
 </resources>
